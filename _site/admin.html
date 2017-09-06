@@ -1,0 +1,251 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Risk Management | Colyar Technology Solutions</title>
+		<!--
+		<link rel="apple-touch-icon" sizes="180x180" href="../Images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../Images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../Images/favicon-16x16.png">
+        <link rel="manifest" href="../Images/manifest.json">
+        <link rel="mask-icon" href="../Images/safari-pinned-tab.svg" color="#11406c">
+        <link rel="shortcut icon" href="../Images/favicon.ico">
+        <meta name="msapplication-config" content="../Images/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+		-->
+		<link rel="stylesheet" href="assets/css/style.css">
+		<script src="assets/js/jquery-3.2.1.min.js"></script>
+		<script src="assets/js/script.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<div class="navbar">
+					<div class="nav__toggle--open">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="brand">
+						<a href="#">Colyar | Risk Management</a>
+					</div>
+					<div class="subnav">
+						<a href="#">Programs</a>
+						<a href="#">Help</a>
+						<a href="#">Logout</a>
+					</div>
+				</div>
+				<div class="breadcrumbs">
+					<div>
+						<a href="#">Dashboard</a>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="sidebar">
+	<div class="program">
+		<div class="program__gauge">
+			<div class="program__gauge__wrapper">
+				<div class="gauge__bar"></div>
+				<div class="gauge__count" data-risk="1" data-issues="8">
+					<span>8</span>issues
+				</div>
+			</div>
+		</div>
+		<div class="program__details">
+			<div class="program__title">
+				<label class="select">
+					<select name="change_program">
+						<option value="nslp">NSLP</option>
+						<option value="cacfp">CACFP</option>
+						<option value="sfsp">SFSP</option>
+						<option value="fdp">FDP</option>
+					</select>
+				</label>
+			</div>
+			<div class="program__name">
+				National School Lunch Program
+			</div>
+		</div>
+		<a href="#" class="btn btn--half btn--light program__admin">
+			admin
+		</a>
+		<a href="#" class="btn btn--half btn--neutral program__issues">
+			issues
+		</a>
+	</div>
+</div>
+
+<div class="panel panel--tabbed">
+	<div class="panel__tabs">
+		<a href="#" class="btn btn--third btn--light panel__tab active">thresholds</a>
+		<a href="#" class="btn btn--third btn--light panel__tab">exceptions</a>
+		<a href="#" class="btn btn--third btn--light panel__tab">gauge</a>
+	</div>
+	
+	<div class="panel__content">
+		<div class="thresholds">
+	<div class="threshold__wrapper">
+	<div class="threshold__details">
+		<div class="threshold__name">School District Enrollment Threshold</div>
+		<div class="threshold__help">
+			<i class="fa fa-question-circle"></i>
+		</div>
+		<div class="threshold__toggle">
+			<label class="toggle_switch">
+				<input type="checkbox" name="threshold_1_on">
+				<span></span>
+			</label>
+		</div>
+	</div>
+	<div class="threshold__help__content">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<div class="threshold__setting">
+		<div class="threshold__value threshold__value--min">
+			<span class="threshold__value__num"></span>
+			<span class="threshold__value__desc">below census estimate</span>
+		</div>
+		<div class="threshold__slider__wrapper">
+			<input class="threshold__slider threshold__slider--reverse" name="threshold_1_min" type="range" min="-100" max="0" step="1" data-value="-10" />
+		</div>
+	</div>
+	<div class="threshold__setting">
+		<div class="threshold__slider__wrapper">
+			<input class="threshold__slider" name="threshold_1_max" type="range" min="0" max="100" step="1" data-value="12" />
+		</div>
+		<div class="threshold__value threshold__value--max">
+			<span class="threshold__value__num"></span>
+			<span class="threshold__value__desc"> above census estimate</span>
+		</div>
+	</div>
+</div>
+</div>
+	</div>
+	
+	<div class="panel__content">
+		<div class="thresholds">
+	Threshold Exception Settings - <select name="organization" class="select_search"></select>
+	<div class="threshold__wrapper">
+	<div class="threshold__details">
+		<div class="threshold__name">School District Enrollment Threshold</div>
+		<div class="threshold__help">
+			<i class="fa fa-question-circle"></i>
+		</div>
+		<div class="threshold__toggle">
+			<label class="toggle_switch">
+				<input type="checkbox" name="threshold_1_on">
+				<span></span>
+			</label>
+		</div>
+	</div>
+	<div class="threshold__help__content">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<div class="threshold__setting">
+		<div class="threshold__value threshold__value--min">
+			<span class="threshold__value__num"></span>
+			<span class="threshold__value__desc">below census estimate</span>
+		</div>
+		<div class="threshold__slider__wrapper">
+			<input class="threshold__slider threshold__slider--reverse" name="threshold_1_min" type="range" min="-100" max="0" step="1" data-value="-10" />
+		</div>
+	</div>
+	<div class="threshold__setting">
+		<div class="threshold__slider__wrapper">
+			<input class="threshold__slider" name="threshold_1_max" type="range" min="0" max="100" step="1" data-value="12" />
+		</div>
+		<div class="threshold__value threshold__value--max">
+			<span class="threshold__value__num"></span>
+			<span class="threshold__value__desc"> above census estimate</span>
+		</div>
+	</div>
+</div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var organizations = [
+			{id:'Bladen County Schools',text:'Bladen County Schools'},
+			{id:'Dublin Primary',text:'Dublin Primary'},
+			{id:'Avery County Schools',text:'Avery County Schools'},
+			{id:'Buncombe County Schools',text:'Buncombe County Schools'},
+			{id:'Black Mountain Primary',text:'Black Mountain Primary'}
+		];
+		$('.select_search').select2({
+			data:organizations
+		});
+	});
+</script>
+	</div>
+	
+	<div class="panel__content">
+		<div class="gauges">
+	<div class="gauge__wrapper">
+	<div class="gauge__details">
+		<div class="gauge__name">School District Enrollment</div>
+		<div class="gauge__help">
+			<i class="fa fa-question-circle"></i>
+		</div>
+		<div class="gauge__toggle">
+			<label class="toggle_switch">
+				<input type="checkbox" name="gauge_1_on">
+				<span></span>
+			</label>
+		</div>
+	</div>
+	<div class="gauge__help__content">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<div class="gauge__setting">
+		<div class="gauge__value gauge__value--min">
+			<span class="gauge__value__num"></span>
+			<span class="gauge__value__desc">below census estimate</span>
+		</div>
+		<div class="gauge__slider__wrapper">
+			<input class="gauge__slider gauge__slider--reverse" name="gauge_1_min" type="range" min="-100" max="0" step="1" data-value="-15" data-threshold="-10" />
+			<span></span>
+		</div>
+	</div>
+	<div class="gauge__setting">
+		<div class="gauge__slider__wrapper">
+			<input class="gauge__slider" name="gauge_1_max" type="range" min="0" max="100" step="1" data-value="17" data-threshold="12" />
+			<span></span>
+		</div>
+		<div class="gauge__value gauge__value--max">
+			<span class="gauge__value__num"></span>
+			<span class="gauge__value__desc"> above census estimate</span>
+		</div>
+	</div>
+</div>
+</div>
+	</div>
+</div>
+			</div>
+			<div class="footer">
+				<div class="sidenav">
+					<div class="sidenav__wrapper">
+						<div class="sidenav__header">
+							<div class="nav__toggle--close"><i class="fa fa-angle-left"></i></div>
+							<div class="brand">Colyar | Risk Management</div>
+						</div>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="index.html">Dashboard</a></li>
+							<li><a href="#">Reports</a></li>
+							<li><a href="#">Settings</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

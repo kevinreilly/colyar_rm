@@ -1,0 +1,25 @@
+---
+layout: master
+---
+
+{% include main/sidebar.html %}
+
+<div class="panel panel--tabbed">
+	<div class="panel__tabs">
+		<a href="#" class="btn btn--third btn--light panel__tab active">thresholds</a>
+		<a href="#" class="btn btn--third btn--light panel__tab">exceptions</a>
+		<a href="#" class="btn btn--third btn--light panel__tab">gauge</a>
+	</div>
+	
+	<div class="panel__content">
+		{% include admin/thresholds/thresholds.html %}
+	</div>
+	
+	<div class="panel__content">
+		{% include admin/exceptions/exceptions.html %}
+	</div>
+	
+	<div class="panel__content">
+		{% include admin/gauges/gauges.html %}
+	</div>
+</div>
