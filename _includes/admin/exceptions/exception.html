@@ -1,35 +1,37 @@
+{% if threshold.org_type == 'sponsor' %}
 <div class="threshold__wrapper">
 	<div class="threshold__details">
-		<div class="threshold__name">School District Enrollment Threshold</div>
+		<div class="threshold__name">{{threshold.name}} Threshold</div>
 		<div class="threshold__help">
 			<i class="fa fa-question-circle"></i>
 		</div>
 		<div class="threshold__toggle">
 			<label class="toggle_switch">
-				<input type="checkbox" name="threshold_1_on">
+				<input type="checkbox" name="threshold_1_active" {% if threshold.active == true %}checked{% endif %}>
 				<span></span>
 			</label>
 		</div>
 	</div>
 	<div class="threshold__help__content">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		{{threshold.desc}}
 	</div>
 	<div class="threshold__setting">
 		<div class="threshold__value threshold__value--min">
 			<span class="threshold__value__num"></span>
-			<span class="threshold__value__desc">below census estimate</span>
+			<span class="threshold__value__desc">below {{threshold.data_ref}}</span>
 		</div>
 		<div class="threshold__slider__wrapper">
-			<input class="threshold__slider threshold__slider--reverse" name="threshold_1_min" type="range" min="-100" max="0" step="1" data-value="-10" />
+			<input class="threshold__slider threshold__slider--reverse" name="threshold_1_min" type="range" min="{{threshold.min}}" max="0" step="1" data-value="{{threshold.min_value}}" />
 		</div>
 	</div>
 	<div class="threshold__setting">
 		<div class="threshold__slider__wrapper">
-			<input class="threshold__slider" name="threshold_1_max" type="range" min="0" max="100" step="1" data-value="12" />
+			<input class="threshold__slider" name="threshold_1_max" type="range" min="0" max="{{threshold.max}}" step="1" data-value="{{threshold.max_value}}" />
 		</div>
 		<div class="threshold__value threshold__value--max">
 			<span class="threshold__value__num"></span>
-			<span class="threshold__value__desc"> above census estimate</span>
+			<span class="threshold__value__desc"> above {{threshold.data_ref}}</span>
 		</div>
 	</div>
 </div>
+{% endif %}

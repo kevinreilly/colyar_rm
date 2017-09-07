@@ -1474,6 +1474,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body { line-height: 1; }
 
+p { font-size: 1rem; }
+
+h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+
 ol, ul { list-style: none; }
 
 blockquote, q { quotes: none; }
@@ -1617,7 +1621,7 @@ span.s6 { font-size: 1.3333333333rem; line-height: 1em; }
 .content .panel { border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16); min-height: 40rem; }
 .content .panel .panel__tab.btn--light.active { background: #11406C; }
 .content .panel .panel__content { display: none; padding: 5.3333333333rem 2rem 2rem; }
-.content .thresholds .threshold__wrapper { padding: 2rem; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16); }
+.content .thresholds .threshold__wrapper { padding: 2rem; margin-top: 2rem; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16); }
 .content .thresholds .threshold__wrapper:after { content: ''; clear: both; display: block; }
 .content .thresholds .threshold__wrapper .threshold__details:after { content: ''; clear: both; display: block; }
 .content .thresholds .threshold__wrapper .threshold__details > div { float: left; }
@@ -1636,7 +1640,7 @@ span.s6 { font-size: 1.3333333333rem; line-height: 1em; }
 .content .thresholds .threshold__setting .threshold__slider::-webkit-slider-thumb { -webkit-appearance: none; width: 1.5rem; height: 1.5rem; background-color: #11406C; border-radius: 50%; }
 .content .thresholds .threshold__setting .threshold__slider::-moz-range-thumb { -webkit-appearance: none; width: 1.5rem; height: 1.5rem; background-color: #11406C; border-radius: 50%; }
 .content .thresholds .threshold__setting .threshold__slider::-ms-thumb { -webkit-appearance: none; width: 1.5rem; height: 1.5rem; background-color: #11406C; border-radius: 50%; }
-.content .gauges .gauge__wrapper { padding: 2rem; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16); }
+.content .gauges .gauge__wrapper { padding: 2rem; margin-top: 2rem; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16); }
 .content .gauges .gauge__wrapper:after { content: ''; clear: both; display: block; }
 .content .gauges .gauge__wrapper .gauge__details:after { content: ''; clear: both; display: block; }
 .content .gauges .gauge__wrapper .gauge__details > div { float: left; }

@@ -42,6 +42,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
 	line-height: 1;
 }
+p {
+	font-size:1rem;
+}
+h2 {
+	font-size:1.5rem;
+	margin-bottom:1rem;
+}
 ol, ul {
 	list-style: none;
 }
@@ -502,6 +509,7 @@ $desktop-grid: (
 	.thresholds {
 		.threshold__wrapper {
 			padding:2rem;
+			margin-top:2rem;
 			border:1px solid $grey;
 			box-shadow:0 2px 4px rgba(0,0,0,0.16);
 			&:after {
@@ -611,6 +619,7 @@ $desktop-grid: (
 	.gauges {
 		.gauge__wrapper {
 			padding:2rem;
+			margin-top:2rem;
 			border:1px solid $grey;
 			box-shadow:0 2px 4px rgba(0,0,0,0.16);
 			&:after {
