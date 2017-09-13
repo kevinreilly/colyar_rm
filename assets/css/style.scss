@@ -59,6 +59,15 @@ blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
+.red {
+	color:$red;
+}
+.yellow {
+	color:$yellow;
+}
+.green {
+	color:$green;
+}
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -83,6 +92,92 @@ span {
 
 a {
 	text-decoration:none;
+}
+
+.table {
+	display:block;
+	font-size:1.1666666667rem;
+	.trow__collapse {
+		display:none;
+	}
+	.trow {
+		display:table;
+		width:100%;
+		&.trow--2 {
+			padding-left:4rem;
+		}
+		&.trow--3 {
+			padding-left:10rem;
+			> div {
+				line-height:2rem;
+				&:first-of-type {
+					width:2rem;
+				}
+			}
+		}
+		> div {
+			display:table-cell;
+			padding:0.5rem 1rem;
+			border-bottom:1px solid $grey;
+			&:first-of-type {
+				width:6rem;
+				padding-right:0;
+				padding-left:2rem;
+			}
+			&:nth-of-type(3) {
+				width:4rem;
+				text-align:center;
+			}
+			&:last-of-type {
+				width:4rem;
+				text-align:right;
+				padding-right:2rem;
+			}
+			.issue_count {
+				display:inline-block;
+				width:2rem;
+				line-height:2rem;
+				font-size:1.1666666667rem;
+				color:#fff;
+				text-align:center;
+				background-color:$secondary;
+				border-radius:50%;
+				margin-right:0.5rem;
+				cursor:pointer;
+				& + i {
+					color:$secondary;
+				}
+			}
+			.fa-circle {
+				font-size:1rem;
+			}
+			.fa-user-circle, .fa-user-circle-o {
+				color:$secondary;
+			}
+		}
+		&.trow--header {
+			background:$primary;
+			color:#fff;
+			padding-top:0.333333333rem;
+			padding-bottom:0.333333333rem;
+			> div {
+				border-bottom:0;
+			}
+		}
+		&.trow--subheader {
+			background:$secondary;
+			color:#fff;
+			> div {
+				width:100%;
+				padding-top:0.8333333333rem;
+				padding-right:1rem;
+				padding-bottom:0.8333333333rem;
+				text-align:left;
+				font-style:italic;
+				border-bottom:0;
+			}
+		}
+	}
 }
 
 .select {
@@ -501,9 +596,12 @@ $desktop-grid: (
 		.panel__tab.btn--light.active {
 			background:$primary;
 		}
-		.panel__content {
+		&.panel--tabbed .panel__content {
 			display:none;
-			padding:5.3333333333rem 2rem 2rem;
+			padding-top:5.3333333333rem;
+		}
+		.panel__content {
+			padding:2rem;
 		}
 	}
 	.thresholds {

@@ -1,0 +1,137 @@
+---
+layout: master
+---
+
+{% include main/sidebar.html %}
+
+<div class="panel">
+	<div class="panel__content">
+		<h2>Organizations with Issues</h2>
+		<div class="table">
+			<div class="trow trow--header">
+				<div><i class="fa fa-hashtag"></i></div>
+				<div>Organization</div>
+				<div><i class="fa fa-user"></i></div>
+				<div><i class="fa fa-exclamation-triangle"></i></div>
+			</div>
+			<div class="trow trow--subheader">
+				<div>Sponsor Level Issues</div>
+			</div>
+			<div class="trow trow--1">
+				<div><span class="issue_count">2</span><i class="fa fa-chevron-right"></i></div>
+				<div>Sponsor 1</div>
+				<div><i class="fa fa-circle red"></i></div>
+			</div>
+			<div class="trow__collapse">
+				<div class="trow trow--2">
+					<div><span class="issue_count">2</span><i class="fa fa-chevron-right"></i></div>
+					<div>Percent Free Enrollment</div>
+					<div><i class="fa fa-circle red"></i></div>
+				</div>
+				<div class="trow__collapse">
+					<div class="trow trow--3">
+						<div></div>
+						<div>May 2017</div>
+						<div><i class="fa fa-user-circle-o"></i></div>
+						<div><i class="fa fa-circle red"></i></div>
+					</div>
+					<div class="trow trow--3">
+						<div></div>
+						<div>April 2017</div>
+						<div><i class="fa fa-user-circle"></i></div>
+						<div><i class="fa fa-circle yellow"></i></div>
+					</div>
+				</div>
+			</div>
+			<div class="trow trow--1">
+				<div><span class="issue_count">2</span><i class="fa fa-chevron-right"></i></div>
+				<div>Sponsor 2</div>
+				<div><i class="fa fa-circle red"></i></div>
+			</div>
+			<div class="trow__collapse">
+				<div class="trow trow--2">
+					<div><span class="issue_count">2</span><i class="fa fa-chevron-right"></i></div>
+					<div>Percent Free Enrollment</div>
+					<div><i class="fa fa-circle red"></i></div>
+				</div>
+				<div class="trow__collapse">
+					<div class="trow trow--3">
+						<div></div>
+						<div>May 2017</div>
+						<div><i class="fa fa-user-circle-o"></i></div>
+						<div><i class="fa fa-circle red"></i></div>
+					</div>
+					<div class="trow trow--3">
+						<div></div>
+						<div>April 2017</div>
+						<div><i class="fa fa-user-circle"></i></div>
+						<div><i class="fa fa-circle yellow"></i></div>
+					</div>
+				</div>
+			</div>
+			<div class="trow trow--subheader">
+				<div>Site Level Issues</div>
+			</div>
+			<div class="trow trow--1">
+				<div><span class="issue_count">2</span><i class="fa fa-chevron-right"></i></div>
+				<div>Site 1</div>
+				<div><i class="fa fa-circle red"></i></div>
+			</div>
+			<div class="trow__collapse">
+				<div class="trow trow--2">
+					<div><span class="issue_count">2</span><i class="fa fa-chevron-right"></i></div>
+					<div>Percent Free Enrollment</div>
+					<div><i class="fa fa-circle red"></i></div>
+				</div>
+				<div class="trow__collapse">
+					<div class="trow trow--3">
+						<div></div>
+						<div>May 2017</div>
+						<div><i class="fa fa-user-circle-o"></i></div>
+						<div><i class="fa fa-circle red"></i></div>
+					</div>
+					<div class="trow trow--3">
+						<div></div>
+						<div>April 2017</div>
+						<div><i class="fa fa-user-circle"></i></div>
+						<div><i class="fa fa-circle yellow"></i></div>
+					</div>
+				</div>
+			</div>
+			<div class="trow trow--1">
+				<div><span class="issue_count">2</span><i class="fa fa-chevron-right"></i></div>
+				<div>Site 2</div>
+				<div><i class="fa fa-circle red"></i></div>
+			</div>
+			<div class="trow__collapse">
+				<div class="trow trow--2">
+					<div><span class="issue_count">2</span><i class="fa fa-chevron-right"></i></div>
+					<div>Percent Free Enrollment</div>
+					<div><i class="fa fa-circle red"></i></div>
+				</div>
+				<div class="trow__collapse">
+					<div class="trow trow--3">
+						<div></div>
+						<div>May 2017</div>
+						<div><i class="fa fa-user-circle-o"></i></div>
+						<div><i class="fa fa-circle red"></i></div>
+					</div>
+					<div class="trow trow--3">
+						<div></div>
+						<div>April 2017</div>
+						<div><i class="fa fa-user-circle"></i></div>
+						<div><i class="fa fa-circle yellow"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	$('.issue_count').on('click', function(){
+		$(this).closest('.trow').next('.trow__collapse').slideToggle();
+	});
+});
+</script>
