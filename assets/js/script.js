@@ -97,21 +97,35 @@ $(document).ready(function(){
 						this.changeTab(panel_tabs, panel_contents);
 					},
 					showOnlyActiveTab: function(panel_tabs, panel_contents){
+						if((window.location.search).includes('?tab=')){
+							var activeTab = window.location.search;
+						} else {
+							var activeTab = null;
+						}
+						
 						for (var j = 0; j < panel_contents.length; j++) {
-							// tab and content
 							var panel_tab = $(panel_tabs[j]);
 							var panel_content = $(panel_contents[j]);
+							
+							if(activeTab && activeTab.includes(panel_tab.data('tab'))){
+								$('.panel__tab').removeClass('active');
+								panel_tab.addClass('active');
+							}
+							
 							if (panel_tab.hasClass('active')) {
 								panel_content.show();
 							} else {
 								panel_content.hide();
 							}
 						}
+						
 					},
 					changeTab: function(panel_tabs, panel_contents){
 						var tabbedPanel = this;
 						panel_tabs.click(function(){
-							var tab_index = $(this).prevAll().length;
+							var selectedTab = $(this).data('tab');
+							window.history.replaceState(null, null, "?tab="+ selectedTab);
+							//var tab_index = $(this).prevAll().length;
 							$(this).siblings().removeClass('active');
 							$(this).addClass('active');
 							tabbedPanel.showOnlyActiveTab(panel_tabs, panel_contents);

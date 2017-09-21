@@ -84,12 +84,12 @@
 
 <div class="panel panel--tabbed">
 	<div class="panel__tabs">
-		<a href="#" class="btn btn--third btn--light panel__tab active">thresholds</a>
-		<a href="#" class="btn btn--third btn--light panel__tab">exceptions</a>
-		<a href="#" class="btn btn--third btn--light panel__tab">gauge</a>
+		<a class="btn btn--third btn--light panel__tab active" data-tab="thresholds">thresholds</a>
+		<a class="btn btn--third btn--light panel__tab" data-tab="exceptions">exceptions</a>
+		<a class="btn btn--third btn--light panel__tab" data-tab="gauge">gauge</a>
 	</div>
 	
-	<div class="panel__content">
+	<div class="panel__content" data-tab="thresholds">
 		<div class="thresholds">
 	<h2>Threshold Settings</h2>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -169,7 +169,7 @@
 </div>
 	</div>
 	
-	<div class="panel__content">
+	<div class="panel__content" data-tab="exceptions">
 		<div class="thresholds">
 	<h2>Threshold Exception Settings -</h2> <select name="organization" class="select_search"></select>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -221,8 +221,8 @@
 <script>
 	$(document).ready(function(){
 		var organizations = [
-			{id:'Bladen County Schools',text:'Bladen County Schools'},
-			{id:'Dublin Primary',text:'Dublin Primary'},
+			{id:'Bladen County Schools',text:'Bladen County Schools'}
+			,{id:'Dublin Primary',text:'Dublin Primary'},
 			{id:'Avery County Schools',text:'Avery County Schools'},
 			{id:'Buncombe County Schools',text:'Buncombe County Schools'},
 			{id:'Black Mountain Primary',text:'Black Mountain Primary'}
@@ -234,7 +234,7 @@
 </script>
 	</div>
 	
-	<div class="panel__content">
+	<div class="panel__content" data-tab="gauge">
 		<div class="gauges">
 	<h2>Gauge Settings</h2>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

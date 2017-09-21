@@ -6,20 +6,20 @@ layout: master
 
 <div class="panel panel--tabbed">
 	<div class="panel__tabs">
-		<a href="#" class="btn btn--third btn--light panel__tab active">thresholds</a>
-		<a href="#" class="btn btn--third btn--light panel__tab">exceptions</a>
-		<a href="#" class="btn btn--third btn--light panel__tab">gauge</a>
+		<a class="btn btn--third btn--light panel__tab active" data-tab="thresholds">thresholds</a>
+		<a class="btn btn--third btn--light panel__tab" data-tab="exceptions">exceptions</a>
+		<a class="btn btn--third btn--light panel__tab" data-tab="gauge">gauge</a>
 	</div>
 	
-	<div class="panel__content">
+	<div class="panel__content" data-tab="thresholds">
 		{% include admin/thresholds/thresholds.html %}
 	</div>
 	
-	<div class="panel__content">
+	<div class="panel__content" data-tab="exceptions">
 		{% include admin/exceptions/exceptions.html %}
 	</div>
 	
-	<div class="panel__content">
+	<div class="panel__content" data-tab="gauge">
 		{% include admin/gauges/gauges.html %}
 	</div>
 </div>
