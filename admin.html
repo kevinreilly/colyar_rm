@@ -23,3 +23,11 @@ layout: master
 		{% include admin/gauges/gauges.html %}
 	</div>
 </div>
+
+<script>
+	$(document).ready(function(){
+		colyar_rm.gauges();
+		colyar_rm.controls();
+		colyar_rm.panels(); //remove for production
+	});
+</script>

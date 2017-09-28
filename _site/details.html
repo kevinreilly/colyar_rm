@@ -74,10 +74,12 @@
 </div>
 
 <div class="panel panel--split issues_list">
-	<select>
-		<option value="current" selected>Current Issues</option>
-		<option value="resolved">Resolved Issues</option>
-	</select>
+	<label class="select">
+		<select name="issue_status">
+			<option value="current">Current Issues</option>
+			<option value="resolved">Resolved Issues</option>
+		</select>
+	</label>
 	
 	<div class="table">
 		<div class="trow trow--1">
@@ -89,27 +91,102 @@
 			<div class="trow trow--2">
 				<div></div>
 				<div>May 2017</div>
+				<div><i class="fa fa-check-circle-o"></i></div>
+				<div><i class="fa fa-comment-o"></i></div>
 				<div><i class="fa fa-user-circle-o"></i></div>
 				<div><i class="fa fa-circle red"></i></div>
 			</div>
 			<div class="trow trow--2">
 				<div></div>
 				<div>April 2017</div>
-				<div><i class="fa fa-user-circle"></i></div>
+				<div><i class="fa fa-check-circle-o"></i></div>
+				<div><i class="fa fa-comment-o"></i></div>
+				<div><i class="fa fa-user-circle-o"></i></div>
 				<div><i class="fa fa-circle yellow"></i></div>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="panel panel--split">
-	panel 2
+<div class="panel panel--split panel--hidden issue_details">
+	<h2>Percent Free Enrollment - May 2017</h2> <i class="fa fa-question-circle help_toggle"></i>
+	<div class="help_text">Help Text</div>
+	<div class="table_toggle">
+		<i class="fa fa-table" data-content="issue_table"></i>
+		<i class="fa fa-area-chart" data-content="issue_graph"></i>
+		<i class="fa fa-download"></i>
+	</div>
+	<div class="panel__content panel__content--active issue_table">
+		<div class="table">
+			<div class="trow trow--header">
+				<div>Month</div>
+				<div>Census Deviation <i class="fa fa-question-circle help_toggle"></i><div class="help_text">Help Text</div></div>
+				<div><i class="fa fa-exclamation-triangle"></i></div>
+			</div>
+			<div class="trow">
+				<div>May '17</div>
+				<div>16%</div>
+				<div><i class="fa fa-circle red"></i></div>
+			</div>
+			<div class="trow__collapse">
+				<div>Detailed Data Here</div>
+			</div>
+			<div class="trow">
+				<div>Apr '17</div>
+				<div>10%</div>
+				<div><i class="fa fa-circle yellow"></i></div>
+			</div>
+			<div class="trow">
+				<div>Mar '17</div>
+				<div>10%</div>
+				<div><i class="fa fa-circle yellow"></i></div>
+			</div>
+			<div class="trow">
+				<div>Feb '17</div>
+				<div>10%</div>
+				<div><i class="fa fa-circle yellow"></i></div>
+			</div>
+			<div class="trow">
+				<div>Jan '17</div>
+				<div>10%</div>
+				<div><i class="fa fa-circle yellow"></i></div>
+			</div>
+		</div>
+	</div>
+	<div class="panel__content issue_graph">
+		Graph goes here
+	</div>
 </div>
 
 <script>
 $(document).ready(function(){
-	$('.issue_count_wrapper').on('click', function(){
+	$('.trow--1').on('click', function(){
 		$(this).closest('.trow').next('.trow__collapse').slideToggle();
-		$(this).find('i').toggleClass('fa-chevron-right').toggleClass('fa-chevron-down');
+		$(this).find('i').toggleClass('fa-chevron-right fa-chevron-down');
+		if($(this).hasClass('trow--opened')){
+			$(this).removeClass('trow--opened');
+			$(this).next().find('.trow').removeClass('trow--active');
+			$(this).closest('.panel').next().fadeOut().addClass('panel--hidden');
+		}
+	});
+	$('.trow--2').on('click', function(){
+		$(this).siblings('.trow--2').removeClass('trow--active');
+		$(this).addClass('trow--active');
+		$(this).parent().prev().addClass('trow--opened');
+		$(this).closest('.panel').next().fadeIn().removeClass('panel--hidden');
+	});
+	$('.help_toggle').on('click', function(){
+		$(this).siblings('.help_text').slideToggle();
+	});
+	$('.table_toggle i').on('click', function(){
+		var content = $(this).data('content');
+		console.log(content);
+		$('.panel__content').removeClass('panel__content--active');
+		$('.'+ content).addClass('panel__content--active');
+	});
+	$('.issue_table').on('click', '.trow', function(){
+		if($(this).next().hasClass('trow__collapse')){
+			$(this).next().slideToggle();
+		}
 	});
 });
 </script>
@@ -131,5 +208,10 @@ $(document).ready(function(){
 				</div>
 			</div>
 		</div>
+		<script>
+			$(document).ready(function(){
+				colyar_rm.nav();
+			});
+		</script>
 	</body>
 </html>
